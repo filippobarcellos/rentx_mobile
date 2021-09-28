@@ -6,7 +6,7 @@
 
 ## 📚 About
 
-**RentX** is a mobile app developed to allow people to search and rent cars in a easy way. The purpose of the project was to learn more about react native and try out some new ideas.
+**RentX** is a mobile app developed to allow people to search and rent cars in a easy way. The purpose of the project was to try out some ideas that I have been learning along the way.
 
 ---
 
