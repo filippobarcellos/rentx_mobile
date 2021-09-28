@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components/native";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList, RectButton } from "react-native-gesture-handler";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 export const Wrapper = styled.View`
@@ -31,7 +31,7 @@ export const List = styled(FlatList).attrs({
   },
 })``;
 
-export const Item = styled.View`
+export const Item = styled(RectButton)`
   background-color: ${({ theme }) => theme.colors.white};
   margin-top: 16px;
   padding: 24px;

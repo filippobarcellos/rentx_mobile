@@ -15,7 +15,7 @@ import {
 
 import theme from "./src/styles/theme";
 
-import EditProfile from "./src/modules/User/Edit";
+import Routes from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -37,7 +37,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <EditProfile />
+      <Routes />
     </ThemeProvider>
   );
 }

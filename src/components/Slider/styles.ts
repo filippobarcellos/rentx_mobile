@@ -1,10 +1,14 @@
 import styled, { css } from "styled-components/native";
 import { FlatList } from "react-native-gesture-handler";
-import { Dimensions } from "react-native";
 
 export const Container = styled.View`
   width: 100%;
-  margin-top: -28px;
+`;
+
+export const Group = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 // export const List = styled(FlatList).attrs({
@@ -17,7 +21,7 @@ export const Container = styled.View`
 // })``;
 
 export const ImageWrapper = styled.View`
-  width: ${Dimensions.get("window").width}px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   height: 126px;
@@ -30,16 +34,13 @@ export const Image = styled.Image.attrs({
   height: 126px;
 `;
 
-export const Group = styled.View`
-  align-self: flex-end;
+export const IndexGroup = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
   max-width: 48px;
-  margin-bottom: 36px;
-  margin-right: 24px;
 `;
 
 export const Index = styled.View`

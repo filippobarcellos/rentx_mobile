@@ -6,6 +6,7 @@ import {
 
 export const Wrapper = styled.View`
   flex: 1;
+  background-color: #ffffff;
 `;
 
 export const Header = styled.View`
@@ -74,7 +75,9 @@ export const Content = styled.ScrollView.attrs({
   contentContainerStyle: {
     paddingBottom: 24,
   },
-})``;
+})`
+  padding-top: 26px;
+`;
 
 export const Footer = styled.View`
   width: 100%;

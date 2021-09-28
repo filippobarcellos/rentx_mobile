@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
 
 import * as S from "./styles";
@@ -8,8 +9,10 @@ type BackButtonProps = {
 };
 
 const BackButton = ({ color = "black", ...rest }: BackButtonProps) => {
+  const { goBack } = useNavigation();
+
   return (
-    <S.Container {...rest}>
+    <S.Container {...rest} onPress={() => goBack()}>
       <Feather
         name="chevron-left"
         size={24}

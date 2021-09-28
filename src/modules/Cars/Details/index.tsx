@@ -1,10 +1,10 @@
 import React from "react";
 import { StatusBar } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import Button from "../../../components/Button";
 import Slider from "../../../components/Slider";
 import Accessory from "../../../components/Accessory";
-import BackButton from "../../../components/BackButton";
 
 import AccelerationIcon from "../../../assets/icons/Acceleration";
 import PeopleIcon from "../../../assets/icons/People";
@@ -12,6 +12,12 @@ import PeopleIcon from "../../../assets/icons/People";
 import * as S from "./styles";
 
 const Details = () => {
+  const { navigate } = useNavigation();
+
+  const navigateToSchedule = () => {
+    navigate("Schedule");
+  };
+
   return (
     <S.Wrapper>
       <StatusBar
@@ -20,9 +26,8 @@ const Details = () => {
         translucent
       />
       <S.Header>
-        <BackButton />
+        <Slider />
       </S.Header>
-      <Slider />
       <S.Info>
         <S.Group>
           <S.TextGroup>
@@ -53,7 +58,7 @@ const Details = () => {
       </S.Info>
       <S.Footer>
         <S.ButtonWrapper>
-          <Button>Choose rent period</Button>
+          <Button onPress={navigateToSchedule}>Rent</Button>
         </S.ButtonWrapper>
       </S.Footer>
     </S.Wrapper>

@@ -1,4 +1,5 @@
 import React from "react";
+import BackButton from "../BackButton";
 
 import * as S from "./styles";
 
@@ -29,10 +30,13 @@ const Slider = () => {
   return (
     <S.Container>
       <S.Group>
-        <S.Index />
-        <S.Index />
-        <S.Index />
-        <S.Index />
+        <BackButton />
+        <S.IndexGroup>
+          <S.Index />
+          <S.Index />
+          <S.Index />
+          <S.Index />
+        </S.IndexGroup>
       </S.Group>
       <S.ImageWrapper>
         <S.Image source={{ uri: cars[0].thumbnail }} />

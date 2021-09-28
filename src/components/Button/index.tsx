@@ -5,13 +5,13 @@ import * as S from "./styles";
 
 interface ButtonProps extends RectButtonProps {
   children: string;
-  variant?: string;
+  variant?: "primary" | "secondary" | "dark" | "white";
 }
 
-const Button = ({ children, ...rest }: ButtonProps) => {
+const Button = ({ children, variant = "primary", ...rest }: ButtonProps) => {
   return (
-    <S.Container {...rest}>
-      <S.Text>{children}</S.Text>
+    <S.Container variant={variant} {...rest}>
+      <S.Text variant={variant}>{children}</S.Text>
     </S.Container>
   );
 };

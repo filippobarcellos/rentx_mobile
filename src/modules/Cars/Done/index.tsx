@@ -1,37 +1,31 @@
 import React from "react";
 import { StatusBar, useWindowDimensions } from "react-native";
 
-import DoneIcon from "../../assets/icons/done.svg";
-import Logo from "../../assets/images/logo_background.svg";
+import DoneIcon from "../../../assets/icons/Done";
+import Logo from "../../../assets/icons/Brand";
 
-import {
-  ConfirmButton,
-  ConfirmText,
-  Description,
-  Container,
-  Title,
-} from "./styles";
+import * as S from "./styles";
 
 const Done = () => {
   const { width } = useWindowDimensions();
 
   return (
-    <Container>
+    <S.Container>
       <StatusBar barStyle="light-content" />
 
       <Logo width={width} />
       <DoneIcon />
 
-      <Title>Success</Title>
-      <Description>
+      <S.Title>Success</S.Title>
+      <S.Description>
         All you need to do now is take your documents to the nearest store and
         collect your car.
-      </Description>
+      </S.Description>
 
-      <ConfirmButton>
-        <ConfirmText>Ok</ConfirmText>
-      </ConfirmButton>
-    </Container>
+      <S.ConfirmButton>
+        <S.ConfirmText>Ok</S.ConfirmText>
+      </S.ConfirmButton>
+    </S.Container>
   );
 };
 

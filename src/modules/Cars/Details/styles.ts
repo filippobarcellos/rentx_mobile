@@ -10,7 +10,8 @@ export const Wrapper = styled.View`
 `;
 
 export const Header = styled.View`
-  padding-top: ${getStatusBarHeight() + 18}px;
+  padding: ${getStatusBarHeight() + 18}px 24px 0 24px;
+  flex-direction: row;
 `;
 
 export const Info = styled.ScrollView.attrs({

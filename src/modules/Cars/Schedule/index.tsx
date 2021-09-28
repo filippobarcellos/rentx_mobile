@@ -1,4 +1,6 @@
 import React from "react";
+import { StatusBar } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import BackButton from "../../../components/BackButton";
 import Button from "../../../components/Button";
@@ -9,8 +11,15 @@ import ArrowIcon from "../../../assets/icons/ArrowIcon";
 import * as S from "./styles";
 
 const Schedule = () => {
+  const { navigate } = useNavigation();
+
+  const navigateToConfirm = () => {
+    navigate("Confirmation");
+  };
+
   return (
     <S.Wrapper>
+      <StatusBar barStyle="light-content" translucent />
       <S.Header>
         <BackButton color="white" />
         <S.Title>
@@ -39,9 +48,10 @@ const Schedule = () => {
       <S.Content>
         <Calendar />
       </S.Content>
+
       <S.Footer>
         <S.ButtonWrapper>
-          <Button>Confirm</Button>
+          <Button onPress={navigateToConfirm}>Confirm</Button>
         </S.ButtonWrapper>
       </S.Footer>
     </S.Wrapper>
