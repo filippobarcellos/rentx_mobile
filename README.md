@@ -1,7 +1,7 @@
 <h3 align="center"> RentX</h3>
 
 <p align="center">
-  <img width= '200' src=".github/logo.png">
+  <img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/logo.png">
 </p>
 
 ## 📚 About
