@@ -1,5 +1,5 @@
 import React from "react";
-import Svg, { Path, Rect, SvgProps, Defs, G } from "react-native-svg";
+import Svg, { Path, Rect, SvgProps, Defs, G, ClipPath } from "react-native-svg";
 
 interface Props extends SvgProps {}
 
@@ -13,9 +13,9 @@ const EnergyIcon = ({ ...rest }: Props) => {
         />
       </G>
       <Defs>
-        <clipPath id="clip0">
+        <ClipPath id="clip0">
           <Rect width="24" height="24" fill="white" />
-        </clipPath>
+        </ClipPath>
       </Defs>
     </Svg>
   );

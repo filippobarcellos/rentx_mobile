@@ -2,7 +2,6 @@ interface Rent {
   period: string;
   price: number;
 }
-
 interface Accessories {
   type: string;
   name: string;

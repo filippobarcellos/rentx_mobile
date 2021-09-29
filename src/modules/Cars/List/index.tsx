@@ -31,8 +31,8 @@ const List = () => {
     })();
   }, []);
 
-  const navigateToDetails = () => {
-    navigate("Details");
+  const navigateToDetails = (car: Car) => {
+    navigate("Details", { car });
   };
 
   return (
@@ -48,7 +48,7 @@ const List = () => {
           data={cars}
           keyExtractor={(item) => String(item.id)}
           renderItem={({ item }) => (
-            <S.Item key={item.id} onPress={navigateToDetails}>
+            <S.Item key={item.id} onPress={() => navigateToDetails(item)}>
               <S.Group>
                 <S.Brand>{item.brand}</S.Brand>
                 <S.Name>{item.name}</S.Name>

@@ -3,30 +3,11 @@ import BackButton from "../BackButton";
 
 import * as S from "./styles";
 
-const cars = [
-  {
-    id: 1,
-    thumbnail:
-      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_low/v1/editorial/vhs/Audi-RS5-Coupe.png",
-  },
-  {
-    id: 2,
-    thumbnail:
-      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_low/v1/editorial/vhs/Audi-RS5-Coupe.png",
-  },
-  {
-    id: 3,
-    thumbnail:
-      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_low/v1/editorial/vhs/Audi-RS5-Coupe.png",
-  },
-  {
-    id: 4,
-    thumbnail:
-      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_low/v1/editorial/vhs/Audi-RS5-Coupe.png",
-  },
-];
+interface SliderProps {
+  photos: string[];
+}
 
-const Slider = () => {
+const Slider = ({ photos }: SliderProps) => {
   return (
     <S.Container>
       <S.Group>
@@ -39,7 +20,7 @@ const Slider = () => {
         </S.IndexGroup>
       </S.Group>
       <S.ImageWrapper>
-        <S.Image source={{ uri: cars[0].thumbnail }} />
+        <S.Image source={{ uri: photos[0] }} />
       </S.ImageWrapper>
     </S.Container>
   );

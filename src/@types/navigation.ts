@@ -1,3 +1,5 @@
+import { Car } from "../models/Car";
+
 declare global {
   namespace ReactNavigation {
     interface RootParamList extends RootStackParamList {}
@@ -6,7 +8,9 @@ declare global {
 
 export type RootStackParamList = {
   List: undefined;
-  Details: undefined;
+  Details: {
+    car: Car;
+  };
   Confirmation: undefined;
   Done: undefined;
   Schedule: undefined;
