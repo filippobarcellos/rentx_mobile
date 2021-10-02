@@ -1,19 +1,29 @@
 import React from "react";
-import { StatusBar } from "react-native";
+import { StatusBar, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import BackButton from "../../../components/BackButton";
 import Button from "../../../components/Button";
 import Calendar from "../../../components/Calendar";
 
+import useIntervalDate from "../../../hooks/useIntervalDates";
 import ArrowIcon from "../../../assets/icons/ArrowIcon";
 
 import * as S from "./styles";
 
 const Schedule = () => {
+  const { datesInterval, onDateChange, rentalPeriod } = useIntervalDate();
+
+  const startDateFormatted = rentalPeriod?.start_date_formatted;
+  const endDateFormatted = rentalPeriod?.end_date_formatted;
+
   const { navigate } = useNavigation();
 
   const navigateToConfirm = () => {
+    if (!startDateFormatted || !endDateFormatted) {
+      Alert.alert("Please select a date first");
+      return;
+    }
     navigate("Confirmation");
   };
 
@@ -29,8 +39,8 @@ const Schedule = () => {
         <S.DatesInfo>
           <S.Group>
             <S.Text>From</S.Text>
-            <S.DateContainer isSelected={false}>
-              <S.Date />
+            <S.DateContainer isSelected={!!startDateFormatted}>
+              <S.Date>{startDateFormatted}</S.Date>
             </S.DateContainer>
           </S.Group>
 
@@ -38,15 +48,15 @@ const Schedule = () => {
 
           <S.Group>
             <S.Text>To</S.Text>
-            <S.DateContainer isSelected={false}>
-              <S.Date />
+            <S.DateContainer isSelected={!!endDateFormatted}>
+              <S.Date>{endDateFormatted}</S.Date>
             </S.DateContainer>
           </S.Group>
         </S.DatesInfo>
       </S.Header>
 
       <S.Content>
-        <Calendar />
+        <Calendar markedDates={datesInterval} onDayPress={onDateChange} />
       </S.Content>
 
       <S.Footer>

@@ -1,9 +1,31 @@
 import React from "react";
 import { Feather } from "@expo/vector-icons";
-import { Calendar as CustomCalendar } from "react-native-calendars";
+import {
+  Calendar as CustomCalendar,
+  LocaleConfig,
+  DateCallbackHandler,
+} from "react-native-calendars";
 import { useTheme } from "styled-components";
+import { EN_UK } from "./config/locales";
 
-const Calendar = () => {
+LocaleConfig.locales["en-UK"] = EN_UK;
+LocaleConfig.defaultLocale = "en-UK";
+
+export type MarkedDatesProps = {
+  [date: string]: {
+    color: string;
+    textColor: string;
+    disabled?: boolean;
+    disabledTouchEvent?: boolean;
+  };
+};
+
+type CalendarProps = {
+  markedDates: MarkedDatesProps;
+  onDayPress: DateCallbackHandler;
+};
+
+const Calendar = ({ markedDates, onDayPress }: CalendarProps) => {
   const theme = useTheme();
 
   return (
@@ -43,6 +65,9 @@ const Calendar = () => {
         />
       )}
       minDate={new Date()}
+      markingType="period"
+      markedDates={markedDates}
+      onDayPress={onDayPress}
     />
   );
 };
