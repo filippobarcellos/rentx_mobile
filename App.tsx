@@ -13,9 +13,10 @@ import {
   Archivo_600SemiBold,
 } from "@expo-google-fonts/archivo";
 
-import theme from "./src/styles/theme";
+import AppProvider from "./src/shared/context";
+import theme from "./src/shared/styles/theme";
 
-import Routes from "./src/routes";
+import Routes from "./src/shared/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -31,13 +32,15 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      <Routes />
-    </ThemeProvider>
+    <AppProvider>
+      <ThemeProvider theme={theme}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        <Routes />
+      </ThemeProvider>
+    </AppProvider>
   );
 }

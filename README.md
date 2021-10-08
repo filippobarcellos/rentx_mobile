@@ -10,12 +10,17 @@
 
 ---
 
+<img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/home.png">
+<img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/profile.png">
+<img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/details.png">
+<img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/confirm.png">
+
 ## 🚀 Technologies that I used
 
-- Typescript
 - React Native
+- Typescript
 - Expo
-- React Hook Form
+- React Query
 
 ---
 
@@ -31,10 +36,12 @@
 # Install the dependencies
 $ yarn
 
-# Start the app
-$ yarn ios or yarn android to run it on respective simulator or
+# Start the json-server
+yarn server
 
-# Obs: The app was built with expo so you just need to download the expo app in your mobile and run the application with yarn start
+# Start the app
+$ yarn ios or yarn android to run it on respective simulator
+
 ````
 
 ---
