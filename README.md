@@ -1,13 +1,5 @@
 <h3 align="center"> RentX</h3>
 
-<p align="center">
-  <img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/logo.png">
-</p>
-
-## 📚 About
-
-**RentX** is a mobile app developed to allow people to search and rent cars in a easy way. The purpose of the project was to try out some ideas that I have been learning along the way.
-
 ---
 
 <div align="center">
@@ -16,6 +8,12 @@
   <img width= '200' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/details.png">
   <img width= '200' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/confirm.png">
 </div>
+
+## 📚 About
+
+**RentX** is a mobile app developed to allow people to search and rent cars in a easy way. The purpose of the project was to try out some ideas that I have been learning along the way.
+
+---
 
 ## 🚀 Technologies that I used
 
