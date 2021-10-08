@@ -10,10 +10,12 @@
 
 ---
 
-<img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/home.png">
-<img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/profile.png">
-<img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/details.png">
-<img width= '1100' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/confirm.png">
+<div align="center">
+  <img width= '200' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/home.png">
+  <img width= '200' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/profile.png">
+  <img width= '200' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/details.png">
+  <img width= '200' src="https://github.com/filippobarcellos/rentx_mobile/blob/main/github/confirm.png">
+</div>
 
 ## 🚀 Technologies that I used
 
